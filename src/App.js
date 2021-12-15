@@ -5,6 +5,7 @@ import { ACTIONS } from './actions';
 import { reducer } from './reducers';
 import { formatOperand } from './utils';
 import './style.css';
+// import './index.css';
 
 function App() {
   const [{ currentOperand, previousOperand, operation, overwrite }, dispatch] = useReducer(reducer, { currentOperand: null, previousOperand: null, operation: null, overwrite: false });
