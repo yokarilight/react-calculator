@@ -3,13 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-    h1 {
-        @apply text-2xl;
+    body {
+        @apply m-0 bg-gradient-to-r from-light-blue to-light-green
     }
-    h2 {
-        @apply text-xl;
-    }
-    div {
-        @apply text-xl;
+    button {
+        @apply cursor-pointer text-medium border border-solid border-white outline-none bg-white bg-opacity-75 hover:bg-white hover:bg-opacity-90 focus:bg-white focus:bg-opacity-90
     }
 }

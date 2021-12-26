@@ -4,18 +4,17 @@ import OperationButton from './OperationButton';
 import { ACTIONS } from './actions';
 import { reducer } from './reducers';
 import { formatOperand } from './utils';
-import './style.css';
-// import './index.css';
+import './index.css';
 
 function App() {
   const [{ currentOperand, previousOperand, operation, overwrite }, dispatch] = useReducer(reducer, { currentOperand: null, previousOperand: null, operation: null, overwrite: false });
   return (
     <div className='calculator-grid'>
-      <div className='output'>
-        <div className='previous-calculate'>{formatOperand(previousOperand)} {operation}</div>
-        <div className='current-calculate'>{formatOperand(currentOperand)}</div>
+      <div className='output col-span-full bg-black bg-opacity-75 flex flex-col items-end justify-around p-3'>
+        <div className='text-white text-opacity-75 text-2xl'>{formatOperand(previousOperand)} {operation}</div>
+        <div className='text-white text-large'>{formatOperand(currentOperand)}</div>
       </div>
-      <button className='span-two' onClick={() => dispatch({ type: ACTIONS.CLEAR })}>AC</button>
+      <button className='grid-span-2 col-span-2' onClick={() => dispatch({ type: ACTIONS.CLEAR })}>AC</button>
       <button onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}>DEL</button>
       <OperationButton operation='÷' dispatch={dispatch} />
       <DigitButton digit='1' dispatch={dispatch} />
@@ -32,7 +31,7 @@ function App() {
       <OperationButton operation='-' dispatch={dispatch} />
       <DigitButton digit='.' overwrite={overwrite} dispatch={dispatch} />
       <DigitButton digit='0' dispatch={dispatch} />
-      <button className='span-two' onClick={() => dispatch({ type: ACTIONS.EVALUATE })}>=</button>
+      <button className='grid-span-2 col-span-2' onClick={() => dispatch({ type: ACTIONS.EVALUATE })}>=</button>
     </div>
   );
 }
