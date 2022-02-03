@@ -10,8 +10,14 @@ module.exports = {
       'black': colors.black,
       'light-blue': '#00AAFF',
       'light-green': '#00FF6C',
+      'light-orange': '#EBBBA7',
+      'light-purple': '#CFC7F8',
+      'gray-blue': '#CFD9DF',
+      'heavy-gray': '#CFCFCF',
+      'light-gray': '#C3C3C3'
     },
     fontSize: {
+      'small': '1.5rem',
       'medium': '2rem',
       'large': '2.5rem',
     },
@@ -39,6 +45,20 @@ module.exports = {
           wordWrap: 'break-word',
           wordBreak: 'break-all',
         },
+        '.unit-type': {
+          borderRadius: '20px',
+          padding: '5px 10px',
+          background: 'hsla(0, 0%, 100%, .3)',
+        },
+        '.select': {
+          width: '175px',
+          background: 'hsla(0, 0%, 100%, .3)',
+        },
+        '.convert-btn': {
+          width: '150px',
+          background: 'hsla(0, 0%, 100%, .3)',
+          borderRadius: '40px',
+        }
       }
 
       addComponents(calculateGrid)

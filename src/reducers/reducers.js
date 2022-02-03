@@ -1,5 +1,5 @@
-import { ACTIONS } from './actions';
-import { evaluate } from './utils';
+import { ACTIONS } from '../actions/actions';
+import { evaluate } from '../tool/utils';
 
 export const reducer = (state, action) => {
   const { type, payload } = action;

@@ -1,4 +1,4 @@
-import { ACTIONS } from './actions';
+import { ACTIONS } from '../../actions/actions';
 
 export default function DigitButton({ dispatch, digit, overwrite }) {
   return (

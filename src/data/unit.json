@@ -1,0 +1,28 @@
+{
+	"length": {
+		"unit": [
+			"meter(m)",
+			"centimeter(cm)",
+			"millimeter(mm)",
+			"kilometer(km)"
+		],
+		"factor": [
+			1,
+			0.01,
+			0.001,
+			1000
+		]
+	},
+	"weight": {
+		"unit": [
+			"kilogram(kg)",
+			"gram(g)",
+			"ton(t)" 
+		],
+		"factor": [
+			1,
+			0.001,
+			1000
+		]
+	}
+}
